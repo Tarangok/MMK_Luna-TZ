@@ -7,7 +7,7 @@ from routes.organization import router as organization_router
 
 app = FastAPI(
     title="MMK_Luna API",
-    description="API для MMK_Luna — управление деятельностями, организациями и зданиями.",
+    description="REST API для MMK_Luna",
     version="0.1.0",
     docs_url="/swagger"
 )
@@ -20,7 +20,7 @@ app.include_router(organization_router)
 if __name__ == "__main__":
     uvicorn.run(
         app, 
-        host="localhost", 
+        host="0.0.0.0", 
         port=8080, 
         log_level="debug"
     )
