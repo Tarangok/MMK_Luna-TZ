@@ -16,7 +16,9 @@ app.include_router(activity_router)
 app.include_router(building_router)
 app.include_router(organization_router)
 
-#ffffhgfh
+def foo():
+    return 1
+
 if __name__ == "__main__":
     uvicorn.run(
         app, 
@@ -24,3 +26,4 @@ if __name__ == "__main__":
         port=8080, 
         log_level="debug"
     )
+
